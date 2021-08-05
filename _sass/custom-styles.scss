@@ -1,0 +1,27 @@
+// larger overall font sizes
+html {
+  font-size: 100%;
+
+  @media (min-width: 600px) {
+    font-size: 120%;
+  }
+}
+
+// smaller code block font size
+pre code {
+  font-size: 85%;
+}
+
+// smaller titles in posts and tags
+.post{
+  &-title {
+    font-size: 3rem;
+  }
+}
+.tags {
+  &-header {
+    &-title {
+      font-size: 3rem;
+    }
+  }
+}

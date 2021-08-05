@@ -30,7 +30,6 @@ github_username:  aaronlindsey
 linkedin_username:  aaronlindsey
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 
@@ -53,3 +52,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+theme: tale
+
+permalink: /:year-:month-:day/:title
+paginate: 5
