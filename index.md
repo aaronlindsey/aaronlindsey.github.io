@@ -10,6 +10,5 @@ title: Aaron Lindsey
 
 Howdy 👋 I'm an engineer passionate about building secure and reliable software. I currently work at VMware as a committer on the [Apache Geode](https://geode.apache.org/) project and as a developer for the [Tanzu GemFire](https://tanzu.vmware.com/gemfire) product.
 
----
-{:style="clear:both"}
+
 
