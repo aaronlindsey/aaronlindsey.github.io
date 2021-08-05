@@ -2,13 +2,47 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: home
-title: Aaron Lindsey
+layout: default
+title: Home
 ---
 
-![](assets/img/aaron.jpeg){:style="float:right;width:12em;margin-left:1em;margin-bottom:1em"}
+<div class="home">
+  <h1 class="home-title">{{ site.author.name }}</h1>
 
-Howdy 👋 I'm an engineer passionate about building secure and reliable software. I currently work at VMware as a committer on the [Apache Geode](https://geode.apache.org/) project and as a developer for the [Tanzu GemFire](https://tanzu.vmware.com/gemfire) product.
+  <img class="home-photo" src="{{ 'assets/aaron.jpeg' | relative_url }}">
 
+  <p>
+  Howdy 👋 I'm an engineer passionate about building secure and reliable software. I currently work at VMware as a committer on the <a href="https://geode.apache.org/">Apache Geode</a> project and as a developer for the <a href="https://tanzu.vmware.com/gemfire">Tanzu GemFire</a> product.
+  </p>
 
+  <div class="social">
+    {% include social.html %}
+  </div>
 
+  <p>Scroll down to view my recent posts. You can also subscribe via <a href="{{ 'feed.xml' | relative_url }}">RSS</a>, or browse by <a href="{{ 'tags' | relative_url }}">tag</a>.</p>
+</div>
+
+<div class="catalogue">
+  {% for post in site.posts %}
+    {% if post.sticky %}
+      {% include catalogue_item.html sticky='true' %}
+    {% endif %}
+  {% endfor %}
+
+  {% for post in paginator.posts %}
+    {% include catalogue_item.html %}
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  <!--
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+  {% endif %}
+
+  <span>{{ paginator.page }}</span>
+  -->
+</div>

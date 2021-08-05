@@ -2,6 +2,7 @@
 layout: post
 title: Filestore (Google CTF 2021)
 date: 2021-07-24
+category: blog
 tags:
 - ctf
 ---
@@ -115,7 +116,7 @@ A simple brute-force solution would involve storing every permutation of 27 ASCI
 3. Starting with `}`, do the same as in Step 2 except work backwards and stop when the length is 11.
 4. Combine the values found in steps 2 and 3 to recover the flag.
 
-The Python code for my solution is [here](). It uses the [pwntools](https://github.com/Gallopsled/pwntools) library for easily interacting with the remote server.
+The Python code for my solution is [here]({{ 'assets/2021-07-24-filestore-google-ctf-2021/x.py' | relative_url }}). It uses the [pwntools](https://github.com/Gallopsled/pwntools) library for easily interacting with the remote server.
 
 Running my solution on the remote server prints the flag as shown below:
 
