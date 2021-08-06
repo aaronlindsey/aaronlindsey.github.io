@@ -17,5 +17,16 @@
   &-post {
     display: flex;
     justify-content: space-between;
+
+    &-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &-meta {
+      text-align: right;
+      white-space: nowrap;
+    }
   }
 }

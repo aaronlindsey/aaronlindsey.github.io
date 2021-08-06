@@ -21,13 +21,15 @@ permalink: /tags/
 
     {% for post in tag[1] %}
     <a class="tags-post" href="{{ post.url | prepend: site.baseurl }}">
-      <div>
+      <div class="tags-post-title">
         <span>{{ post.title }}</span>
       </div>
 
-      <time datetime="{{ post.date }}">
-        {{ post.date | date:"%Y-%m-%d" }}
-      </time>
+      <span class="tags-post-meta">
+        <time datetime="{{ post.date }}">
+          {{ post.date | date:"%Y-%m-%d" }}
+        </time>
+      </span>
     </a>
     {% endfor %}
 
