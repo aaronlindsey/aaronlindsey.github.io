@@ -1,0 +1,11 @@
+.post {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $border-color;
+
+  &-tags {
+    a {
+      display: inline-block;
+      margin: 0 0.5rem 0.5rem 0;
+    }
+  }
+}

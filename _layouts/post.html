@@ -3,34 +3,19 @@ layout: default
 ---
 
 <div class="post">
-
   <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-info">
-    {% if page.date %}
-    <time class="post-time" datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% endif %}
 
-    <div class="tags-clouds">
-      {% for tag in page.tags %}
-      <a href="{{ 'tags/' | relative_url }}#{{ tag }}">#{{ tag }}</a>
-      {% endfor %}
-    </div>
+  <time class="post-time" datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+
+  <div class="post-tags">
+    {% for tag in page.tags %}
+    <a href="{{ 'tags/' | relative_url }}#{{ tag }}">#{{ tag }}</a>
+    {% endfor %}
   </div>
 
-  {{ content }}
+  <div class="post-content">
+    {{ content }}
+  </div>
 </div>
 
-{% if page.comments %}
-  {% include disqus_comments.html %}
-{% endif %}
-
-<div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
-  {% endif %}
-
-  <a href="{{ '/' | relative_url }}" class="top">&#8592; Back to Home</a>
-</div>
+{% include back-link.html %}

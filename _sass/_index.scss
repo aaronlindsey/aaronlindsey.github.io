@@ -1,0 +1,45 @@
+.about {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $border-color;
+
+  &-photo {
+    width: 14rem;
+    float: right;
+    margin-left: 2rem;
+    margin-right: 0;
+
+    @media (max-width: $small-screen) {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &-social {
+    list-style: none;
+
+    &-username {
+      font-family: $monospaced;
+      font-size: 85%;
+    }
+  }
+}
+
+.post-preview {
+  &-item {
+    border-bottom: 1px solid $border-color;
+    padding: 1rem 0;
+  }
+
+  &-time {
+    padding-top: 1rem;
+    display: block;
+  }
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 10px
+}

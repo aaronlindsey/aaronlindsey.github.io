@@ -1,0 +1,21 @@
+.tags {
+  &-list {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 2rem;
+
+    a {
+      display: inline-block;
+      margin-right: 0.5rem;
+    }
+  }    
+  
+  &-item {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 2rem;
+  }
+
+  &-post {
+    display: flex;
+    justify-content: space-between;
+  }
+}

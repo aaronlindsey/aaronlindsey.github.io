@@ -29,8 +29,6 @@ url: "https://aaronlindsey.github.io" # the base hostname & protocol for your si
 # Build settings
 plugins:
   - jekyll-feed
-  - jekyll-paginate
-  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -52,10 +50,8 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-remote_theme: chesterhow/tale
-
 permalink: /:categories/:year-:month-:day-:title:output_ext
-paginate: 5
 
 github_username: aaronlindsey
 linkedin_username: aaronlindsey
+rss: RSS

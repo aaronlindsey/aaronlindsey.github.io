@@ -1,0 +1,45 @@
+// Colors
+$default-color: #000;
+$link-color: #ca3a48;
+$border-color: #ddd;
+
+// Fonts
+$sans-serif: 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+$monospaced: Menlo, Monaco, monospace;
+
+// Breakpoints
+$small-screen: 600px;
+
+body {
+  padding: 0;
+  color: $default-color;
+  font-family: $sans-serif;
+  font-size: 120%;
+  line-height: 1.4;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 90%;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+footer {
+  padding: 2rem 0;
+}
+
+pre,
+code {
+  font-family: $monospaced;
+  font-size: 1rem;
+}
+
+.back-link {
+  padding-top: 2rem;
+}
