@@ -34,6 +34,10 @@ footer {
   padding: 2rem 0;
 }
 
+pre {
+  overflow-x: auto;
+}
+
 pre,
 code {
   font-family: $monospaced;
