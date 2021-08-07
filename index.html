@@ -27,7 +27,7 @@ title: Home
   {% for post in site.posts %}
   <a class="post-list-item" href="{{ post.url | relative_url }}">
     <span class="post-list-title">{{ post.title }}</span>
-    <time class="post-list-time" datetime="{{ post.date }}">{{ post.date | date: "%F" }}</time>
+    <time class="post-list-time" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%F" }}</time>
   </a>
   {% endfor %}
 </div>
