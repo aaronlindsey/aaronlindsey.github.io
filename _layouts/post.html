@@ -3,19 +3,19 @@ layout: default
 ---
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title">
+    {{ page.title }}
+  </h1>
 
-  <time class="post-time" datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-
-  <div class="post-tags">
-    {% for tag in page.tags %}
-    <a href="{{ 'tags/' | relative_url }}#{{ tag }}">#{{ tag }}</a>
-    {% endfor %}
-  </div>
+  <p class="post-time">
+    <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+  </p>
 
   <div class="post-content">
     {{ content }}
   </div>
+  
+  <p class="post-backlink">
+    <a href="{{ '/' | relative_url }}">&#8592; Back to Home</a>
+  </p>
 </div>
-
-{% include back-link.html %}

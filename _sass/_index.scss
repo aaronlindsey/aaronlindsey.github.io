@@ -1,45 +1,46 @@
 .about {
-  padding-bottom: 1rem;
   border-bottom: 1px solid $border-color;
+  overflow: auto; // expand to accommodate floats
 
   &-photo {
-    width: 14rem;
+    width: 10rem;
     float: right;
-    margin-left: 2rem;
-    margin-right: 0;
+    margin: 1.5rem 0 1.5rem 1.5rem;
 
     @media (max-width: $small-screen) {
       float: none;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0;
     }
   }
 
   &-social {
     list-style: none;
+    margin: 1.5rem 0;
 
     &-username {
-      font-family: $monospaced;
-      font-size: 85%;
+      font-family: $monospace;
+      font-size: .85rem;
     }
   }
 }
 
-.post-preview {
+.post-list {
+  clear: both;
+  margin: 1rem 0;
+
   &-item {
-    border-bottom: 1px solid $border-color;
-    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &-time {
-    padding-top: 1rem;
-    display: block;
+    text-align: right;
+    white-space: nowrap;
   }
-}
 
-.svg-icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  margin-right: 10px
+  &-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

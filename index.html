@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 title: Home
 ---
@@ -11,19 +8,26 @@ title: Home
 <div class="about">
   <img class="about-photo" src="{{ 'assets/aaron.jpeg' | relative_url }}">
 
-  <p>Howdy! I'm an engineer passionate about building secure and reliable software. I currently work at VMware as a committer on the <a href="https://geode.apache.org/">Apache Geode</a> project and as a developer for the <a href="https://tanzu.vmware.com/gemfire">Tanzu GemFire</a> product.</p>
+  <p>
+    Howdy! I'm a software engineer passionate about building secure and reliable software.
+    I work at VMware as a committer on the <a href="https://geode.apache.org/">Apache Geode</a> project
+    and as a developer for the <a href="https://tanzu.vmware.com/gemfire">Tanzu GemFire</a> product.
+  </p>
 
   <ul class="about-social">
     {%- if site.github_username -%}<li><a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg><span class="about-social-username">{{ site.github_username| escape }}</span></a></li>{%- endif -%}
     {%- if site.linkedin_username -%}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg><span class="about-social-username">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%}
     {%- if site.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span class="about-social-username">{{ site.rss | escape }}</span></a></li>{%- endif -%}
   </ul>
-
-  <p>Scroll down to view recent posts, or browse by <a href="{{ 'tags' | relative_url }}">tag</a>.</p>
 </div>
 
-<div class="post-preview">
+<h2>Posts</h2>
+
+<div class="post-list">
   {% for post in site.posts %}
-    {% include post-preview.html %}
+  <a class="post-list-item" href="{{ post.url | relative_url }}">
+    <span class="post-list-title">{{ post.title }}</span>
+    <time class="post-list-time" datetime="{{ post.date }}">{{ post.date | date: "%F" }}</time>
+  </a>
   {% endfor %}
 </div>
