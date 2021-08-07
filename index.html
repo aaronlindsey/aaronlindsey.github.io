@@ -19,6 +19,8 @@ title: Home
     {%- if site.linkedin_username -%}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg><span class="about-social-username">{{ site.linkedin_username| escape }}</span></a></li>{%- endif -%}
     {%- if site.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span class="about-social-username">{{ site.rss | escape }}</span></a></li>{%- endif -%}
   </ul>
+
+  <div class="clearer"></div>
 </div>
 
 <h2>Posts</h2>

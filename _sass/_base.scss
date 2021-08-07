@@ -55,3 +55,8 @@ footer {
   vertical-align: middle;
   margin-right: 10px
 }
+
+.clearer {
+  // make the outer div expand to contain floats
+  clear: both;
+}
