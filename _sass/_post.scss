@@ -2,4 +2,21 @@
   &-content {
     margin: 2rem 0;
   }
+
+  &-pagination {
+    position: relative;
+    text-align: center;
+
+    &-previous {
+      left: 0;
+    }
+
+    &-next {
+      right: 0;
+    }
+
+    .arrow {
+      position: absolute;
+    }
+  }
 }

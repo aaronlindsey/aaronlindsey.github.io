@@ -15,7 +15,13 @@ layout: default
     {{ content }}
   </div>
   
-  <p class="post-backlink">
-    <a href="{{ '/' | relative_url }}">&#8592; Back to Home</a>
-  </p>
+  <div class="post-pagination">
+    {% if page.previous.url %}
+    <a class="post-pagination-previous arrow" href="{{ page.previous.url | relative_url }}">&#8592; Previous</a>
+    {% endif %}
+    <a href="{{ '/' | relative_url }}">Home</a>
+    {% if page.next.url %}
+    <a class="post-pagination-next arrow" href="{{ page.next.url | relative_url }}">Next &#8594;</a>
+    {% endif %}
+  </div>
 </div>

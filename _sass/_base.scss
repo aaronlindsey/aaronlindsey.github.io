@@ -46,6 +46,12 @@ code {
   font-size: .85rem;
 }
 
+blockquote {
+  border-left: 2px solid $border-color;
+  margin: 1.3rem;
+  padding: 0 1rem;
+}
+
 footer {
   margin: 2rem 0;
   padding: 2rem 0;
@@ -62,4 +68,24 @@ footer {
 .clearer {
   // make the outer div expand to contain floats
   clear: both;
+}
+
+.embedded-media {
+  margin: 2rem 0;
+
+  // responsive iframes: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
