@@ -20,6 +20,10 @@ body {
   margin: 0 auto;
   max-width: $small-screen;
   width: 90%;
+
+  // prevent automatic zooming on mobile
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 a {
