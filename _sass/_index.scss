@@ -3,10 +3,11 @@
   padding-bottom: 1rem;
 
   &-photo {
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     float: right;
-    margin-left: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 
     @media (max-width: $small-screen) {
       float: none;
