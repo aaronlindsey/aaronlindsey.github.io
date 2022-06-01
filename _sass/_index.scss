@@ -1,13 +1,9 @@
 .about {
-  border-bottom: 1px solid $border-color;
-  padding-bottom: 1rem;
-
   &-photo {
     width: 12rem;
     height: 12rem;
     float: right;
     margin-left: 1rem;
-    margin-bottom: 1rem;
 
     @media (max-width: $small-screen) {
       float: none;
@@ -26,7 +22,9 @@
 }
 
 .post-list {
-  margin: 1rem 0;
+  display: none;
+  margin: 2rem 0;
+  border-top: 1px solid $border-color;
 
   &-item {
     display: flex;
