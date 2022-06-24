@@ -22,6 +22,7 @@ title: Home
   <div class="clearer"></div>
 </div>
 
+{% if site.posts and site.posts.size != 0 %}
 <div class="post-list">
   <h2>Posts</h2>
 
@@ -32,3 +33,4 @@ title: Home
   </a>
   {% endfor %}
 </div>
+{% endif %}
