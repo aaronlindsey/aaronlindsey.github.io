@@ -5,6 +5,7 @@ date: 2021-07-24
 category: blog
 tags:
 - ctf
+published: false
 ---
 
 On July 16-17, I participated in the annual [Google CTF](https://capturetheflag.withgoogle.com/) competition. This was my first "real" CTF[^1], so my goal was simply to make it on the [scoreboard](https://capturetheflag.withgoogle.com/scoreboard/) by solving at least one of the challenges. After a few hours tinkering with rusty Python, I managed to solve the Filestore challenge and meet my goal (and had a lot of fun doing it). The original problem description and files are hosted on [GitHub](https://github.com/google/google-ctf/tree/master/2021/quals/misc-filestore). The remainder of this post describes the problem and my solution in detail.
@@ -36,7 +37,7 @@ Time: Sat Jul 17 13:15:05 2021
 Quota: 0.026kB/64.000kB
 Files: 1
 ```
-  
+
 Cracking open `filestore.py` reveals how the server works:
 
 It loads the flag into the file store automatically upon starting up. (This is why the initial status output shows "1" file stored.)

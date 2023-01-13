@@ -7,6 +7,7 @@ tags:
   - kubernetes
 title: Running Apache Geode on Kubernetes
 date: 2020-09-30
+published: false
 ---
 
 I had the opportunity to co-present at [ApacheCon @Home 2020](https://apachecon.com/acah2020/) with fellow Apache Geode committer [Michael Oleske](https://oleske.engineer/). Giving a talk at an all-virtual conference introduced some new challenges, but it was great that so many folks had free access because of the virtual format!

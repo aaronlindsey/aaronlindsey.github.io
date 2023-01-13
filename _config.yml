@@ -32,7 +32,7 @@ theme: null
 
 github_username: aaronlindsey
 linkedin_username: aaronlindsey
-rss: RSS
+# rss: RSS
 
 # Build settings
 plugins:
